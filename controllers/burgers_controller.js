@@ -8,14 +8,16 @@ module.exports = app => {
 
     app.post('/api/burgers', (req, res) => {
         burger.insert(req.body)
-            .then(data => res.json(data));
+            .then(data => res.json(data))
+            .catch(err => res.send(err));
     });
 
     app.put('/api/burgers/:id', (req, res) => {
         burger.update('devoured', {
             col: 'id',
             val: req.params.id
-        }, req.body)
-            .then(data => res.json(data));
+        }, req.body.devoured)
+            .then(data => res.json(data))
+            .catch(err => res.send(err));
     });
 }

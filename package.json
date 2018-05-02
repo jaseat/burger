@@ -8,6 +8,11 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.0",
     "mysql": "^2.15.0"
+  },
+  "scripts": {
+    "run" : "node server.js",
+    "watch" : "nodemon server.js"
   }
 }
