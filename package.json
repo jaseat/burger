@@ -1,0 +1,13 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jaseat/burger.git",
+  "author": "jaseat <jaseat@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
