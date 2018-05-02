@@ -1,0 +1,22 @@
+<h1>Eat Da Burger</h1>
+
+
+<div id="uneaten">
+    {{#each uneaten}}
+        <div>{{this.burger_name}}</div>
+        <button>Devour</button>
+    {{/each}}
+</div>
+
+
+<div id="eaten">
+    {{#each eaten}}
+        <div>{{this.burger_name}}</div>
+    {{/each}}
+</div>
+
+<form id="form">
+    <textarea name="burger-name" id="" cols="30" rows="10"></textarea>
+    <br>
+    <button type="submit">Submit New Burger</button>
+</form>
