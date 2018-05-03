@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const logger = require('morgan');
 const express_handlebars = require('express-handlebars');
