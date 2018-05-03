@@ -1,22 +1,26 @@
 <h1>Eat Da Burger</h1>
 
+<div id="container">
+    <div id="uneaten">
+        <h3>Uneaten</h3>
+        {{#each uneaten}}
+            <div id={{this.id}}>
+                <div>{{inc @index}}. {{this.burger_name}}</div>
+                <button type="button" class="eat" value={{this.id}}>Devour</button>
+            </div>
+        {{/each}}
+    </div>
 
-<div id="uneaten">
-    {{#each uneaten}}
-        <div>{{this.burger_name}}</div>
-        <button>Devour</button>
-    {{/each}}
+
+    <div id="eaten">
+        <h3>Eaten</h3>
+        {{#each eaten}}
+            <div>{{inc @index}}. {{this.burger_name}}</div>
+        {{/each}}
+    </div>
+
+    <form id="form">
+        <input type="text" id="name">
+        <button type="submit">Submit New Burger</button>
+    </form>
 </div>
-
-
-<div id="eaten">
-    {{#each eaten}}
-        <div>{{this.burger_name}}</div>
-    {{/each}}
-</div>
-
-<form id="form">
-    <textarea name="burger-name" id="" cols="30" rows="10"></textarea>
-    <br>
-    <button type="submit">Submit New Burger</button>
-</form>

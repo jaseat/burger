@@ -7,7 +7,7 @@ module.exports = app => {
     });
 
     app.post('/api/burgers', (req, res) => {
-        burger.insert(req.body)
+        burger.insert(req.body.name)
             .then(data => res.json(data))
             .catch(err => res.send(err));
     });
@@ -16,8 +16,8 @@ module.exports = app => {
         burger.update('devoured', {
             col: 'id',
             val: req.params.id
-        }, req.body.devoured)
+        }, parseInt(req.body.devoured))
             .then(data => res.json(data))
-            .catch(err => res.send(err));
+            .catch(err => res.status(400).send(err));
     });
 }

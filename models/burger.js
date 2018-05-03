@@ -10,8 +10,9 @@ const burger = {
     update: (col, where, data) => {
         if(isNaN(where.val))
             return new Promise((res, rej) => rej('Invalid ID'));
-        if(data !== 0 || data !== 1)
+        if(data !== 0 && data !== 1){
             return new Promise((res, rej) => rej('Invalid data'));
+        }
         return orm.updateOne('burgers', col, where, data)
     }
 };
